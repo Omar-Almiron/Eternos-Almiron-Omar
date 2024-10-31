@@ -1,25 +1,33 @@
-let pregunta1 = prompt("Nombre de usuario"); {
-    alert (" bienvenido " + pregunta1);
+function ValidacionUsuario(){
+    let intentosUsuario = 0
+    const maxIntentosUsuario = 3
+    for(intentosUsuario = 0; intentosUsuario < maxIntentosUsuario;intentosUsuario++){
+        let ingresoUsuario = prompt("Ingresa nombre de usuario");
+        let usuario = "azmodan";
+        if(ingresoUsuario==usuario){
+            alert("Usuario correcto");{
+                break;
+            }
+        }else{
+            alert("usuario incorrecto")
+        }
+    }
 }
+ValidacionUsuario();
 
-let pregunta2 = Number(prompt("Edad"));
-
-let pregunta3 = prompt("Ingrese un e-mail");
-
-let NumeroRegion = prompt("Elige numero de region: 1 Europa, 2 Asia, 3 EE.UU, 4 Latam");
-
-    if (NumeroRegion == "1") {
-        alert ("Region: Europa")
-    } else if (NumeroRegion == "2") {
-        alert ("Region: Asia")
-    } else if (NumeroRegion == "3") {
-        alert ("Region: EE.UU")
-    } else if (NumeroRegion == "4") {
-        alert ("Region: Latam")
-    } else 
-        alert ("Error")
-
-
-
-let respuesta = " Nombre de usuario: " + pregunta1 + " Edad: " + pregunta2 + " E-mail: " + pregunta3 + " Region: " + NumeroRegion
- console.log(respuesta)
+function ValidacionContraseña(){
+    let intentosContraseña = 0
+    const maxIntentosContraseña = 3
+    for(intentosContraseña = 0; intentosContraseña < maxIntentosContraseña;intentosContraseña++){
+        let ingrasoContraseña = Number(prompt("ingresa la contraseña"))
+        let contraceña = "eternos"
+        if(ingrasoContraseña==contraceña){
+            alert("contraseña correcta");{
+                break;
+            }
+        }else{
+            alert("Contraseña incorrecta")
+        }
+    }
+}
+ValidacionContraseña();
